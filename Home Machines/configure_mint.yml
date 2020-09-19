@@ -32,11 +32,11 @@
        name: software-properties-common 
        state: present
 
-   - name: Add Docker GPG apt Key
+   - name: Add Apt key
      apt_key:
-       url: "https://download.docker.com/linux/ubuntu/gpg"
+       url: https://download.docker.com/linux/ubuntu/gpg
        state: present
-   
+
    - name: Update apt and install docker-ce
       apt: update_cache=yes name=docker-ce state=latest
 
