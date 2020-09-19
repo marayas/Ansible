@@ -37,6 +37,11 @@
        url: https://download.docker.com/linux/ubuntu/gpg
        state: present
 
+   tasks:
+   - name: Update all packages to the latest version
+     apt:
+       upgrade: dist
+
    - name: Update apt and install docker-ce
      apt: 
        update_cache: yes
