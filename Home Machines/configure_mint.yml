@@ -42,6 +42,16 @@
        update_cache: yes
        name: docker-ce
        state: latest
+   
+   - name: Update apt and install docker-ce-cli
+     apt: 
+       name: docker-ce-cli
+       state: latest
+   
+   - name: Update apt and install containerd.io
+     apt: 
+       name: containerd.io
+       state: latest
 
    - name: Install Docker Module for Python
      pip:
