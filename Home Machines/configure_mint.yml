@@ -1,0 +1,8 @@
+---
+ - hosts: all
+   gather_facts: no
+   
+   tasks:
+   - name: Update all packages to the latest version
+     apt:
+       upgrade: dist
